@@ -6,7 +6,11 @@ using UnityEngine;
 public class score_script : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
-    private int _score;
+    static public int _score;
+
+    void Start(){
+        _score = 0;
+    }
 
     public void AddScore(){
 
