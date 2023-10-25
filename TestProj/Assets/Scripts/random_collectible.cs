@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class random_collectible : MonoBehaviour
 {
-    
+    public score_script score;
     private void OnTriggerEnter2D(Collider2D other){
 
         RepositionCollectible();
@@ -20,6 +20,7 @@ public class random_collectible : MonoBehaviour
         Vector2 newPos = new Vector2(newX, newY);
         transform.position = newPos;
 
+        score.AddScore();
     }
 
 }
